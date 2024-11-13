@@ -1,0 +1,133 @@
+/* Style global de la page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* En-tête et navigation */
+header {
+    background-image:url(téléchargement\ \(1\).jpg);
+    color: white;
+    padding: 20px;
+    text-align: center
+    ;font-size: medium;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section des Produits */
+#produits {
+    padding: 40px;
+    text-align: center;
+}
+
+#produits h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.produits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.produit {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.produit img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produit h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.produit p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.produit button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.produit button:hover {
+    background-color: #0056b3;
+}
+
+/* Pied de page */
+footer {
+    background-image:url(téléchargement\ \(1\).jpg)
+; background-repeat: no-repeat;
+background-size: cover;
+    color: rgb(11, 1, 1);
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .produits-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .produits-container {
+        grid-template-columns: 1fr;
+    }
+
+    .produit {
+        padding: 15px;
+    }
+
+    .produit h3 {
+        font-size: 1.3em;
+    }
+
+    .produit p {
+        font-size: 1em;
+    }
+}
